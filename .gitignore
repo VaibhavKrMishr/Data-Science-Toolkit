@@ -1,0 +1,7 @@
+# Ignore the environment file inside the May directory
+May/.env
+
+# Also good practice to ignore any .env in the root just in case
+.env
+
+uv.lock
