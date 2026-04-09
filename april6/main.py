@@ -1,9 +1,5 @@
-from unicodedata import numeric
-
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-from pandas.core.dtypes.inference import Number
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
