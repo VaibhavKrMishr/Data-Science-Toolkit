@@ -4,7 +4,7 @@ import seaborn as sns
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 
-data = pd.read_excel("sample_superstore_excel_dataset.xlsx", sheet_name="Orders")
+data = pd.read_excel("../Datasets/sample_superstore_excel_dataset.xlsx", sheet_name="Orders")
 
 print("EDA\n")
 print("Data Description\n", data.describe())

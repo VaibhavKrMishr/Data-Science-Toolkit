@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("./melb_data.csv")
+df = pd.read_csv("../Datasets/melb_data.csv")
 
 print(df.head())
 

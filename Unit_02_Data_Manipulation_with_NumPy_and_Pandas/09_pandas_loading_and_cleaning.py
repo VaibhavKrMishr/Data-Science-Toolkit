@@ -1,5 +1,5 @@
 import pandas as pd
-df=pd.read_excel("./tips.xlsx")
+df=pd.read_excel("../Datasets/tips.xlsx")
 # print(df)
 #Read CSV
 
