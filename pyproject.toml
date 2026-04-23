@@ -19,5 +19,6 @@ dependencies = [
     "python-lsp-server>=1.14.0",
     "scikit-learn>=1.8.0",
     "seaborn>=0.13.2",
+    "statsmodels>=0.14.6",
     "tavily-python>=0.7.23",
 ]

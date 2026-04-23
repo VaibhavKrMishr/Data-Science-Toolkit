@@ -1,10 +1,13 @@
 #linear regression
 import numpy as np 
+import pandas as pd
 import matplotlib.pyplot as plt 
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 from statsmodels.stats.outliers_influence import variance_inflation_factor
+
+
 x=np.array([1,2,3,4,5])
 y=np.array([3,4,2,4,5])
 x=x.reshape(-1,1)
@@ -39,3 +42,11 @@ plt.show()
 a = np.array([[3500]])
 predicted_price = model.predict(a)
 print(predicted_price)
+
+X_df = pd.DataFrame(x, columns=["House_Size"])
+vif_data =pd.DataFrame()
+vif_data['Feature'] =X_df.columns
+vif_data['VIF']=[variance_inflation_factor(X_df.values,i)for i in range(X_df.shape[1])]
+
+print("/nVarience Inflation Factor(VIF):")
+print(vif_data)

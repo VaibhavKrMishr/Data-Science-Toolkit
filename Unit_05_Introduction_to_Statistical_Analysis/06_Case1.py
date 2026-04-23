@@ -2,9 +2,8 @@ import numpy as np
 from scipy.stats import chi2_contingency
 
 observed = np.array([
-    [35,52.5,12.5],
-    [28.1,42.1,9.8],
-    [6.9,10.4,2.7]
+    [40,60],
+    [30,70]
 ])
 
 chi2_stat, p_val, dof, expected = chi2_contingency(observed)
@@ -17,7 +16,6 @@ print(expected)
 alpha =0.05
 if p_val < alpha:
     print("/nResult: Reject the Null hypothesis.")
-    print("There 'IS' a statistically significant relationship btw eye color and hair color.")
 else:
     print("/nResult: Fail to reject the Null hypothesis.")
-    print("There is 'NO' statistically significant relationship btw eye color and hair color.")
+    
