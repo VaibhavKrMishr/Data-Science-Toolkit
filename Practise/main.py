@@ -47,7 +47,6 @@ y_pred = model.predict(X_test)
 result = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
 print(result.head())
 
-
 group1 = data[data['PayType'] == 'Debit']['Sales_Cost']
 group2 = data[data['PayType'] == 'Credit']['Sales_Cost']
 
@@ -56,8 +55,9 @@ t_stat, p_value = ttest_ind(group1, group2)
 print("T-statistic:", t_stat)
 print("P-value:", p_value)
 
+alpha =0.05
 
-if p_value < 0.05:
+if p_value < alpha:
     print("Reject Null Hypothesis → Significant association")
 else:
     print("Fail to Reject Null → No significant association")
